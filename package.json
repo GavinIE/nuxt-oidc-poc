@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --host localhost --https --ssl-key localhost-key.pem --ssl-cert localhost.pem --port 3000",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "nuxt": "^3.2.2"
+  },
+  "dependencies": {
+    "oidc-client-ts": "^2.2.1"
+  }
+}
