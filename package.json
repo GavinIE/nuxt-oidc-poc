@@ -11,6 +11,8 @@
     "nuxt": "^3.2.2"
   },
   "dependencies": {
-    "oidc-client-ts": "^2.2.1"
+    "@pinia/nuxt": "^0.4.7",
+    "oidc-client-ts": "^2.2.1",
+    "pinia": "^2.0.28"
   }
 }

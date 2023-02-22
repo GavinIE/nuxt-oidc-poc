@@ -1,0 +1,29 @@
+import { acceptHMRUpdate, defineStore } from 'pinia'
+import { User } from 'oidc-client-ts'
+
+export const useAuth = defineStore('auth', () => {
+  const authUser = ref<User | null>(null)
+
+  const accessToken = computed(() => authUser.value?.access_token ?? '')
+
+  const isLoggedIn = computed(() => !!authUser.value)
+
+  const setUpUserCredentials = (user: User) => {
+    authUser.value = user
+  }
+
+  const clearUserSession = () => {
+    authUser.value = null
+  }
+
+  return {
+    accessToken,
+    isLoggedIn,
+    setUpUserCredentials,
+    clearUserSession,
+  }
+})
+
+if (import.meta.hot) {
+  import.meta.hot.accept(acceptHMRUpdate(useAuth, import.meta.hot))
+}
