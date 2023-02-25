@@ -5,6 +5,8 @@ export default class AuthService {
   userManager: UserManager
 
   constructor() {
+    const config = useRuntimeConfig()
+    console.log(config.authorityUrl);
     const settings = {
       authority: environment.authorityUrl,
       client_id: environment.clientId,

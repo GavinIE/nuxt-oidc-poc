@@ -1,5 +1,5 @@
 <template>
-    <h3>Loggin out...</h3>
+    <h3>Logging out...</h3>
   </template>
   
   <script lang="ts" setup>
